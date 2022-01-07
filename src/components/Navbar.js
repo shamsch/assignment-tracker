@@ -8,8 +8,8 @@ export default function NavBar() {
                 <Link to={'/home'} className='brand'>
                     <h1>Assignment Tracker</h1>
                 </Link>
-                <Link>
-
+                <Link to={'/create'}>
+                    Create Assignment
                 </Link>
             </nav>
         </div>
