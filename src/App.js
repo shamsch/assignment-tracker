@@ -8,7 +8,7 @@ import './App.css'
 import Home from './pages/home/Home'
 import Create from './pages/create/Create'
 import Search from './pages/search/Search'
-import Recipe from './pages/recipe/Recipe'
+import Assignment from './pages/assignment/Assignment'
 
 //components 
 import NavBar from './components/Navbar'
@@ -23,7 +23,7 @@ function App() {
           <Home></Home>
         </Route>
         <Route path={"/recipe/:id"}>
-          <Recipe></Recipe>
+          <Assignment/>
         </Route>
         <Route path={"/search"}>
           <Search></Search>
