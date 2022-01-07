@@ -9,9 +9,9 @@ export default function AssignmentCard({ assignment }) {
       {assignment.map(task => (
         <div key={task.id} className="card">
           <h3>{task.title}</h3>
-          <p>{task.time} to make.</p>
+          <p>{task.time} to complete.</p>
           <div>{task.details.substring(0, 100)}...</div>
-          <Link to={`/assignments/${task.id}`}>Cook This</Link>
+          <Link to={`/assignments/${task.id}`}>Read details</Link>
         </div>
       ))}
     </div>

@@ -22,7 +22,7 @@ function App() {
         <Route exact path={"/"}>
           <Home></Home>
         </Route>
-        <Route path={"/recipe/:id"}>
+        <Route path={"/assignments/:id"}>
           <Assignment/>
         </Route>
         <Route path={"/search"}>
