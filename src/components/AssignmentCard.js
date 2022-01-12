@@ -15,6 +15,10 @@ export default function AssignmentCard({ assignment }) {
     }
   };
 
+  if(assignment.length===0){
+    return <div className="error"> Nothing to show here</div>
+  }
+
   return (
     <div className="assignment-card">
       {assignment.map((task) => (
