@@ -3,36 +3,26 @@
     {
       "id": "1",
       "title": "Clean the floor",
-      "assignedTo": [
-        "Smith",
-        "Joe",
-        "Tim"
-      ],
       "details": "Clean the floor with X, make sure it is Y, keep Z is in place, and report to Rob ",
       "time": "45 minutes"
     },
     {
-      
       "id": "2",
       "title": "Cook dinner",
-      "assignedTo": [
-        "Rob",
-        "Park"
-      ],
       "details": "Cook salad, rice, curry, and soup. Bring X and do Y. Report to Sarah when ready",
       "time": "75 minutes"
     },
     {
-      
       "id": "3",
       "title": "Get the grocery",
-      "assignedTo": [
-        "Sarah",
-        "Jane",
-        "Karim"
-      ],
       "details": "Bring X, Y, Z, I, J and K from the supermarket. Refuel the car and come home ASAP",
       "time": "25 minutes"
+    },
+    {
+      "title": "adding new task ",
+      "details": "task needs to be completed blah blah blah ",
+      "time": "20",
+      "id": "7cEWud-"
     }
   ]
 }

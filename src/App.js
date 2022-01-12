@@ -31,8 +31,8 @@ function App() {
         <Route path={"/create"}>
           <Create></Create>
         </Route>
-        <Route path={""}>
-
+        <Route path={"/home"}>
+          <Home></Home>
         </Route>
       </Switch>
       </BrowserRouter>
