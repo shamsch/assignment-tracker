@@ -7,7 +7,6 @@ import './App.css'
 //pages 
 import Home from './pages/home/Home'
 import Create from './pages/create/Create'
-import Search from './pages/search/Search'
 import Assignment from './pages/assignment/Assignment'
 
 //components 
@@ -24,9 +23,6 @@ function App() {
         </Route>
         <Route path={"/assignments/:id"}>
           <Assignment/>
-        </Route>
-        <Route path={"/search"}>
-          <Search></Search>
         </Route>
         <Route path={"/create"}>
           <Create></Create>
