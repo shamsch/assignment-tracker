@@ -9,7 +9,7 @@ export default function NavBar() {
 
   const toggleMode = () => {
     mode === "dark" ? changeMode("white") : changeMode("dark");
-    console.log(mode);
+    //console.log(mode);
   };
 
   return (
