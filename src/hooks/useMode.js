@@ -9,6 +9,7 @@ export const useMode = () => {
     if(context === undefined){
         throw new Error("out of scope of the ModeContextProvider")
     }
-    
+
+    //context will basically return the value object defined in the context file 
     return context 
 }
