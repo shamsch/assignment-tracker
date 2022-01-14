@@ -1,4 +1,4 @@
-This is another one of my React JS project. Here I have learned to use React Router. No live demo due to local json server being in use. 
+This is another one of my React JS project. Here I have learned to use React Router. No live demo due to local json server being in use for now. 
 
 Shamsur 
 <details>
