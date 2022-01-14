@@ -1,10 +1,12 @@
 import { Link, useHistory } from "react-router-dom";
+import { useMode } from "../hooks/useMode";
 
 // styles
 import "./AssignmentCard.css";
 
 export default function AssignmentCard({ assignment }) {
   const history = useHistory();
+  const {mode} = useMode()
 
   const deleteHandle = async (id) => {
     const res = await fetch(`http://localhost:3000/assignments/${id}`, {
@@ -20,9 +22,9 @@ export default function AssignmentCard({ assignment }) {
   }
 
   return (
-    <div className="assignment-card">
+    <div className={`assignment-card`}>
       {assignment.map((task) => (
-        <div key={task.id} className="card">
+        <div key={task.id} className={`card ${mode}`}>
           <h3>{task.title}</h3>
           <button className="delete-btn" onClick={() => deleteHandle(task.id)}>
             Delete

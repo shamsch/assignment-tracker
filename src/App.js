@@ -13,9 +13,14 @@ import Assignment from './pages/assignment/Assignment'
 //components 
 import NavBar from './components/Navbar'
 
+//hooks
+import { useMode } from './hooks/useMode'
+
 function App() {
+  const {mode} = useMode();
+
   return (
-    <div className="App">
+    <div className={`App ${mode}`}>
       <BrowserRouter>
       <NavBar></NavBar>
       <Switch>
