@@ -26,3 +26,18 @@
     background: #fff;
     color: #333;
   }
+
+  .mode-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  .mode-div img {
+    border: 2.5px #333 dotted ;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
