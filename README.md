@@ -1,5 +1,7 @@
 This is another one of my React JS project. Here I have learned to use React Router, Context API, and basic of Firebase@8.5. Live demo available in the firebase branch. 
 
+Due to some unresolved routing issues at the minute coupled with GitHub pages issues you need to <strong> click on Assignment Tracker in the Navbar to load homepage.</strong> I will look into this later. 
+
 Shamsur 
 <details>
 <summary>Default React ReadME.md</summary>
