@@ -1,26 +1,24 @@
 import { useEffect, useState } from "react"
 import "./Create.css"
-import { useFetch } from "../../hooks/useFetch"
 import {useHistory} from 'react-router-dom'
+import { project } from "../../firebase/config"
 
 export default function Create() {
     const [title, setTitle] = useState("")
     const [details, setDetails] = useState("")
     const [time, setTime] = useState(0)
-    const {data, error, sendData} = useFetch('http://localhost:3000/assignments', 'POST')
     const history = useHistory()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        sendData({title, details, time})
-        console.log(data, error)
-    }
-
-    useEffect(()=>{
-        if(data){
-            history.push('/home')
+        const doc = {title, details, time}
+        try{
+            await project.collection('assignment').add(doc)
+            history.push('/')
+        } catch (err) {
+            console.log(err)
         }
-    }, [data, history])
+    }
 
     return (
         <div className="create">
