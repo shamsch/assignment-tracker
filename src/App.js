@@ -24,19 +24,19 @@ function App() {
       <BrowserRouter>
       <NavBar></NavBar>
       <Switch>
-        <Route exact path={"/assignment-tracker"}>
+        <Route exact path={"/"}>
           <Home></Home>
         </Route>
-        <Route path={"/assignment-tracker/assignments/:id"}>
+        <Route path={"/assignments/:id"}>
           <Assignment/>
         </Route>
-        <Route path={"/assignment-tracker/search"}>
+        <Route path={"/search"}>
           <Search></Search>
         </Route>
-        <Route path={"/assignment-tracker/create"}>
+        <Route path={"/create"}>
           <Create></Create>
         </Route>
-        <Route path={"/assignment-tracker/home"}>
+        <Route path={"/home"}>
           <Home></Home>
         </Route>
       </Switch>
