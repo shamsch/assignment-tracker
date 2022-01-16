@@ -29,7 +29,7 @@ export default function AssignmentCard({ assignment }) {
           <button className="delete-btn" onClick={() => deleteHandle(task.id)}>
             Delete
           </button>
-          <p>{task.time} to complete.</p>
+          <p>{task.time} mins to complete.</p>
           <div>{task.details.substring(0, 100)}...</div>
           <Link to={`/assignments/${task.id}`}>Read details</Link>
         </div>
