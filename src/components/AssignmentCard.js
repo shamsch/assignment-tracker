@@ -1,20 +1,15 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMode } from "../hooks/useMode";
+import { project } from "../firebase/config";
 
 // styles
 import "./AssignmentCard.css";
 
 export default function AssignmentCard({ assignment }) {
-  const history = useHistory();
   const {mode} = useMode()
 
   const deleteHandle = async (id) => {
-    const res = await fetch(`http://localhost:3000/assignments/${id}`, {
-      method: "DELETE",
-    });
-    if (res.ok) {
-      history.go(0);
-    }
+    project.collection('assignments').doc(id).delete()
   };
 
   if(assignment.length===0){
