@@ -13,7 +13,7 @@ export default function Create() {
         e.preventDefault();
         const doc = {title, details, time}
         try{
-            await project.collection('assignment').add(doc)
+            await project.collection('assignments').add(doc)
             history.push('/')
         } catch (err) {
             console.log(err)
