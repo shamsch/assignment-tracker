@@ -14,7 +14,7 @@ export default function Create() {
         const doc = {title, details, time}
         try{
             await project.collection('assignments').add(doc)
-            history.push('/assignment-tracker')
+            history.push('/')
         } catch (err) {
             console.log(err)
         }
