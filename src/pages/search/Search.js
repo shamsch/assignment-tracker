@@ -1,7 +1,7 @@
-import { useFetch } from '../../hooks/useFetch'
 import { useLocation } from 'react-router-dom'
 import AssignmentCard from '../../components/AssignmentCard'
-
+import { useState, useEffect } from 'react'
+import { project } from '../../firebase/config'
 // styles
 import './Search.css'
 
@@ -12,8 +12,32 @@ export default function Search() {
   const queryParams = new URLSearchParams(queryString)
   const query = queryParams.get('q')
 
-  const url = `http://localhost:3000/assignments?q=${query}`
-  const { error, isPending, data } = useFetch(url)
+  const [data, setData] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+
+    const unsub = project.collection("assignments").where('title', "array-contains", query).onSnapshot(
+      (snapshot) => {
+        if (snapshot.empty) {
+          setError("No assignment to load");
+          setIsPending(false);
+        } else {
+          console.log(snapshot)
+          setData(null);
+          setIsPending(false);
+        }
+      },
+      (err) => {
+        setError(err.message);
+        setIsPending(false);
+      }
+    );
+
+    return () => unsub();
+  }, [query]);
 
   return (
     <div>
