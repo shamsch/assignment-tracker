@@ -1,4 +1,4 @@
-This is another one of my React JS project. Here I have learned to use React Router. No live demo due to local json server being in use for now. 
+This is another one of my React JS project. Here I have learned to use React Router, Context API, and basic of Firebase@8.5. Live demo available in the firebase branch. 
 
 Shamsur 
 <details>
