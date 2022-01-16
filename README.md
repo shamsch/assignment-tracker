@@ -1,4 +1,4 @@
-This is another one of my React JS project. Here I have learned to use React Router. No live demo due to local json server being in use for now. 
+This is another one of my React JS project. Here I have learned to use React Router, context API, and in another branch basic firebase@8.5 firestore. ~~No live demo due to local json server being in use for now.~~ Although in this branch I only go as far as to using a local json server, you can check the **firebase** branch for deployment 
 
 Shamsur 
 <details>
